@@ -26,7 +26,7 @@ const products= [
         price: 149,
         colors:[
             {
-                code:'lightgreen',
+                code:'lightgray',
                 img: './img/jordan.png',
             },
             {
@@ -83,14 +83,69 @@ const products= [
         ]
     }
 
-]
+];
+
+let choosenProduct= products[0]; 
+
+const currentProductImg = document.querySelector(".productImg");
+const currentProductTitle = document.querySelector(".productTitle");
+const currentProductPrice = document.querySelector(".productPrice");
+const currentProductColors = document.querySelectorAll(".color");
+const currentProductSizes = document.querySelectorAll(".size");
+
+
 
 console.log(menuItems);
 menuItems.forEach((item,index)=>{
     item.addEventListener('click',()=>{
-        wrapper.style.transform=`translateX(${-100*index}vw)`
+        
+
+        //change current slide
+        wrapper.style.transform=`translateX(${-100*index}vw)`;
+
+        //change the choosen product
+        choosenProduct= products[index];
+        
+        currentProductTitle.textContent=choosenProduct.title;
+        currentProductPrice.textContent= "$"+choosenProduct.price;
+        currentProductImg.src=choosenProduct.colors[0].img;
+
+        currentProductColors.forEach((color, index)=>{
+            color.style.backgroundColor= choosenProduct.colors[index].code;
+
+            color.addEventListener('click', ()=>{
+                currentProductImg.src = choosenProduct.colors[index].img;
+
+            })
+        })
+
     })
-})
+});
+
+
+currentProductColors.forEach((color, index)=>{
+   
+
+    color.addEventListener('click', ()=>{
+        currentProductImg.src = choosenProduct.colors[index].img;
+
+    });
+});
+
+
+currentProductSizes.forEach((size, index)=>{
+    size.addEventListener("click", ()=>{
+
+        currentProductSizes.forEach((size)=>{
+            size.style.backgroundColor='white';
+            size.style.color='black';
+        });
+
+        size.style.backgroundColor='black';
+        size.style.color='white';
+    });
+});
+
 
 
 
