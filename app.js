@@ -127,6 +127,7 @@ currentProductColors.forEach((color, index)=>{
    
 
     color.addEventListener('click', ()=>{
+        
         currentProductImg.src = choosenProduct.colors[index].img;
 
     });
