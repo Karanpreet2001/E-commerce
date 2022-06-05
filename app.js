@@ -46,7 +46,7 @@ const products= [
                 img: './img/blazer.png',
             },
             {
-                code:'blue',
+                code:'green',
                 img: './img/blazer2.png',
             }
         ]
@@ -62,7 +62,7 @@ const products= [
                 img: './img/crater.png',
             },
             {
-                code:'blue',
+                code:'lightgrey',
                 img: './img/crater2.png',
             }
         ]
@@ -127,9 +127,7 @@ currentProductColors.forEach((color, index)=>{
    
 
     color.addEventListener('click', ()=>{
-        
         currentProductImg.src = choosenProduct.colors[index].img;
-
     });
 });
 
@@ -161,8 +159,45 @@ close.addEventListener('click',()=>{
     payment.style.display='none'
 });
 
+const searchIcon = document.querySelector('#searchInput');
+console.log(searchIcon);
+
+searchIcon.addEventListener('click', ()=>{
+    searchIcon.style.outline='none';
 
 
+})
+
+const getValueInput = ()=>{
+    let inputValue = document.getElementById("searchInput").value;
+   
+
+    for(let i=0; i<products.length;i++){
+        if(inputValue === products[i].title){
+            choosenProduct=products[i];
+   
+
+            wrapper.style.transform=`translateX(${-100*i}vw)`;
+
+            currentProductTitle.textContent=choosenProduct.title;
+           
+            currentProductPrice.textContent= "$"+choosenProduct.price;
+            currentProductImg.src=choosenProduct.colors[0].img;
+    
+            currentProductColors.forEach((color, index)=>{
+                color.style.backgroundColor= choosenProduct.colors[index].code;
+    
+                color.addEventListener('click', ()=>{
+                    currentProductImg.src = choosenProduct.colors[index].img;
+    
+                })
+
+            })
+
+            break;
+        }
+    }
+}
 
 
 

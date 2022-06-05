@@ -32,6 +32,12 @@ nav{
 #searchInput{
     border: none;
     background-color: transparent;
+    color: white;
+}
+#searchInput:active{
+    border: none;
+    color: white;
+    outline: none;
 }
 #searchInput::placeholder{
     color: lightgray;
@@ -177,6 +183,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
 
 }
 
@@ -446,6 +453,7 @@ footer{
 
 .footerRight{
     padding-left: 120px;
+   
 }
 
 .footerRight .fMenuTitle{
@@ -461,4 +469,10 @@ footer{
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.copyR{
+    margin-top: 20px;
+    display: block;
+    color: gray;
 }
