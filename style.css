@@ -476,3 +476,54 @@ footer{
     display: block;
     color: gray;
 }
+
+
+ /* for mobile */
+@media screen and (max-width:480px) {
+
+    nav{
+        padding: 20px;
+    }
+    .search{
+        display: none;
+    }
+    .navBottom{
+        flex-wrap: wrap;
+    
+    }
+    .menuItem{
+        margin: 20px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .slider{
+        clip-path: none;
+        background-size: 100vh;
+    }
+    .sliderImg{
+        width: 90%;
+    }
+    .slideBg{
+        width: 100%;
+        height: 100%;
+    }
+    .sliderTitle{
+        display: none;
+    }
+    .sliderPrice{
+        /* position: absolute; */
+        top: 71.8%;
+        left: 0%;
+        color: white;
+        background-color: beige;
+    }
+    .buyButton{
+        
+        top: 0%;
+        right: 0%;  
+    }
+    .features{
+        flex-direction: column;
+    }
+
+}

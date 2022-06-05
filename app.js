@@ -115,24 +115,23 @@ menuItems.forEach((item,index)=>{
 
             color.addEventListener('click', ()=>{
                 currentProductImg.src = choosenProduct.colors[index].img;
-
-            })
-        })
-
-    })
+            });
+        });
+    });
 });
 
 
 currentProductColors.forEach((color, index)=>{
    
-
     color.addEventListener('click', ()=>{
         currentProductImg.src = choosenProduct.colors[index].img;
     });
+
 });
 
 
 currentProductSizes.forEach((size, index)=>{
+
     size.addEventListener("click", ()=>{
 
         currentProductSizes.forEach((size)=>{
@@ -143,6 +142,7 @@ currentProductSizes.forEach((size, index)=>{
         size.style.backgroundColor='black';
         size.style.color='white';
     });
+
 });
 
 
@@ -151,22 +151,26 @@ const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
 
 productButton.addEventListener('click',()=>{
-    payment.style.display='flex'
+
+    payment.style.display='flex';
+
 });
 
 
 close.addEventListener('click',()=>{
-    payment.style.display='none'
+
+    payment.style.display='none';
+
 });
 
 const searchIcon = document.querySelector('#searchInput');
 console.log(searchIcon);
 
 searchIcon.addEventListener('click', ()=>{
+
     searchIcon.style.outline='none';
 
-
-})
+});
 
 const getValueInput = ()=>{
     let inputValue = document.getElementById("searchInput").value;
