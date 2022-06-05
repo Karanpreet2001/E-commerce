@@ -284,7 +284,7 @@ nav{
     position: absolute;
     margin: auto;
     padding: 10px 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     -webkit-box-shadow: 1px 1px 22px 1px rgba(0,0,0,0.99); 
 box-shadow: 1px 1px 22px 1px rgba(0,0,0,0.99);
@@ -344,4 +344,36 @@ label{
 
 .payButton:hover{
     background-color: #07bc52;
+}
+.close{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    background-color: rgb(160, 158, 158);
+    padding: 6px 8px;
+    color: white;
+    cursor: pointer;
+     
+}
+
+.close:hover{
+    background-color: rgb(246, 52, 52);
+}
+
+
+.gallery{
+    display: flex;
+    padding: 50px;
+}
+.galleryItem{
+    flex: 1;
+    padding: 50px;
+    
+}
+.galleryImg{
+    width: 100%;
+    
+}
+.galleryItem h1{
+text-align: center;
 }
