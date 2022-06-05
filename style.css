@@ -377,3 +377,88 @@ label{
 .galleryItem h1{
 text-align: center;
 }
+
+.newSeason{
+    display: flex;
+ 
+    margin-top: 70px;
+    
+  
+}
+.nsItem{
+    flex: 1; 
+    background-color: rgb(0, 0, 0); 
+    color: rgb(253, 251, 251); 
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    
+}
+.nsImg{
+    width: 100%;
+   
+     
+}
+
+.nsTitle{
+    font-size: 40px;
+}
+
+.nsButton{
+    padding: 15px 13px;
+    background-color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+footer{
+    display: flex;
+    padding: 30px;
+    padding-left: 50px;
+}
+.footerLeft{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.fMenuTitle{
+    font-size: 16px;  
+    font-weight: bold;
+}
+.footerRight{
+    flex: 1;
+}
+
+.fList{
+   padding: 0;
+   list-style: none; 
+}
+
+.flistItem{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.footerRight{
+    padding-left: 120px;
+}
+
+.footerRight .fMenuTitle{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+.fIcons img{
+    padding-top: 20px;
+    padding-right: 20px;
+    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
