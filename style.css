@@ -525,5 +525,61 @@ footer{
     .features{
         flex-direction: column;
     }
+    .product{
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productDetails{
+        width: 100%;
+        
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+    }
+    .productDesc{
+       padding: 0 15px;
+    }
+    .productTitle{
+        margin: 0;
+        font-size: 50px;
+    }
+    .gallery{
+        display: none;
+    }
+    .newSeason{
+        flex-direction: column;
+        margin-top: 0%;
+    }
+    .nsItem:nth-child(2){
+        padding: 50px;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+        
+    }
+    .footerLeft{
+        margin: 0px;
+
+    }
+    .footerRight{
+        padding: 0;
+        padding-top: 20px;
+      
+    }
+    .fIcons img{
+        margin-right:10px ;
+    }
+    .payment{
+        width: 87%;
+        padding: 20px;
+    }
 
 }
